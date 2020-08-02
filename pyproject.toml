@@ -1,0 +1,11 @@
+[tool.black]
+line-length = 100
+skip-string-normalization = true
+
+[tool.pylint.messages_control]
+# C0103 - invalid-name
+# C0330 - bad-continuation
+# R0801 - Similar lines in 2 files
+# R0913 - too-many-arguments
+# W1203 - logging-fstring-interpolation
+disable = "C0103,C0330,R0801,R0913,W1203"

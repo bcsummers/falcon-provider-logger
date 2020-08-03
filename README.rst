@@ -2,7 +2,7 @@
 falcon-provider-logger
 ======================
 
-|coverage| |code-style| |pre-commit|
+|build| |coverage| |code-style| |pre-commit|
 
 A falcon middleware logging provider.
 
@@ -307,7 +307,10 @@ Run pytest test cases and get a coverage report.
 
     > pytest --cov=falcon_provider_logger --cov-report=term-missing tests/
 
-.. |coverage| image:: https://codecov.io/gh/bcsummers/falcon-provider-logger/branch/master/graph/badge.svg?token=bu5lY0LGMg
+.. |build| image:: https://github.com/bcsummers/falcon-provider-logger/workflows/build/badge.svg
+    :target: https://github.com/bcsummers/falcon-provider-logger/actions
+
+.. |coverage| image:: https://codecov.io/gh/bcsummers/falcon-provider-logger/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/bcsummers/falcon-provider-logger
 
 .. |code-style| image:: https://img.shields.io/badge/code%20style-black-000000.svg

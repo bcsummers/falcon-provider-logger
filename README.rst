@@ -284,7 +284,6 @@ This module can be a dependency for other middleware components. If using this m
     app = falcon.API(middleware=[LoggerMiddleware()])
     app.add_route('/middleware', LoggerMiddleWareResource())
 
-
 -----------
 Development
 -----------

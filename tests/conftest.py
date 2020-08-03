@@ -21,25 +21,25 @@ udp_server = test_syslog.start_udp_server(port=5140)
 
 
 @pytest.fixture
-def client_custom() -> object:
+def client_custom() -> testing.TestClient:
     """Create testing client fixture for logger app"""
     return testing.TestClient(app_custom_logger)
 
 
 @pytest.fixture
-def client_null() -> object:
+def client_null() -> testing.TestClient:
     """Create testing client fixture for logger app"""
     return testing.TestClient(app_null_logger)
 
 
 @pytest.fixture
-def client_rh() -> object:
+def client_rh() -> testing.TestClient:
     """Create testing client fixture for logger app"""
     return testing.TestClient(app_rh_logger)
 
 
 @pytest.fixture
-def client_sh_tcp() -> object:
+def client_sh_tcp() -> testing.TestClient:
     """Create testing client fixture for logger app"""
     # import here so tcp server can be started first in pytest_configure
     from .Syslog.app import app_sh_tcp_logger  # pylint: disable=import-outside-toplevel
@@ -48,7 +48,7 @@ def client_sh_tcp() -> object:
 
 
 @pytest.fixture
-def client_sh_udp() -> object:
+def client_sh_udp() -> testing.TestClient:
     """Create testing client fixture for logger app"""
     # import here so udp server can be started first in pytest_configure
     from .Syslog.app import app_sh_udp_logger  # pylint: disable=import-outside-toplevel

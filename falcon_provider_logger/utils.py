@@ -25,10 +25,10 @@ class RotatingFileHandlerCustom(RotatingFileHandler):
         Args:
             filename: The name of the logfile.
             mode: The write mode for the file.
-            maxBytes: The max file size before rotating. Defaults to 0.
-            backupCount: The maximum number of backup files. Defaults to 0.
-            encoding: The log file encoding. Defaults to None.
-            delay: The delay period. Defaults to 0.
+            maxBytes: The max file size before rotating.
+            backupCount: The maximum number of backup files.
+            encoding: The log file encoding.
+            delay: The delay period.
         """
         if not os.path.exists(os.path.dirname(filename)):
             os.makedirs(os.path.dirname(filename), exist_ok=True)
@@ -62,10 +62,10 @@ def rotating_handler(
     formatter: Optional[logging.Formatter] = None,
     # in 3.8 Literal[] could be used
     level: Optional[str] = 'INFO',
-    name: Optional[str] = 'rfh',
     max_bytes: Optional[int] = 10_485_760,
     # in 3.8 Literal[] could be used
     mode: Optional[str] = 'a',
+    name: Optional[str] = 'rfh',
 ) -> RotatingFileHandlerCustom:
     """Return a configured instance of a rotating file handler with sane defaults.
 
@@ -73,8 +73,8 @@ def rotating_handler(
         backup_count: The number of backup log files to keep.
         directory: The directory to write the log file.
         filename: The name of the log file.
-        formatter: A logging formatter to format logging handler. Defaults to a sane
-            formatter with module/lineno.
+        formatter: A logging formatter to format logging handler.
+            Defaults to a sane formatter with module/lineno.
         level: The logging level for the handler.
         name: The handler name.
         max_bytes: The maximum size of the log file.
@@ -114,12 +114,12 @@ def syslog_handler(
     Args:
         host: The syslog hostname/ip.
         facility: The syslog facility.
-        formatter: A logging formatter to format logging handler. Default: A sane
-            formatter with module/lineno.
+        formatter: A logging formatter to format logging handler.
+            Defaults to a sane formatter with module/lineno.
         level: The logging level for the handler.
         name: The handler name.
         port: The syslog port.
-        socktype: The socket type. Either TCP or UDP. Default to "UDP".
+        socktype: The socket type. Either TCP or UDP.
 
     Returns:
         SyslogHandler: A configured instance of the SyslogHandler.

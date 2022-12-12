@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Testing conf module."""
 # standard library
 import os

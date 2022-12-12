@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Test logger middleware."""
 # standard library
 from uuid import uuid4

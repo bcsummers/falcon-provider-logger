@@ -295,7 +295,7 @@ After cloning the repository, all development requirements can be installed via 
 
 .. code:: bash
 
-    > pip install falcon-provider-logger[dev]
+    > poetry install --with dev
     > pre-commit install
 
 Testing
@@ -305,6 +305,7 @@ Run pytest test cases and get a coverage report.
 
 .. code:: bash
 
+    > poetry install --with dev,test
     > pytest --cov=falcon_provider_logger --cov-report=term-missing tests/
 
 .. |build| image:: https://github.com/bcsummers/falcon-provider-logger/workflows/build/badge.svg

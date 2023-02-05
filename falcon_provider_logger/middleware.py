@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 """Falcon logger middleware module."""
 # standard library
 import logging
-from typing import List, Optional
 
 
 class LoggerMiddleware:
@@ -10,10 +8,10 @@ class LoggerMiddleware:
 
     def __init__(
         self,
-        handlers: Optional[List[object]] = None,
-        level: Optional[str] = 'DEBUG',
-        name: Optional[str] = 'SERVER',
-        logger: Optional[object] = None,
+        handlers: list[object] | None = None,
+        level: str | None = 'DEBUG',
+        name: str | None = 'SERVER',
+        logger: logging.Logger | None = None,
     ):
         """Initialize class properties.
 

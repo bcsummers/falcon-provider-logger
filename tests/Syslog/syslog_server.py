@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """TCP/UDP server module"""
 # standard library
 import logging
